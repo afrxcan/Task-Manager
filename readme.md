@@ -5,7 +5,7 @@ A minimal, dark-themed task manager built with HTML, CSS, and JavaScript.
 ## Project Structure
 
 ```
-task-manager/
+Task-Manager/
 ├── index.html   → App structure and layout
 ├── style.css    → Dark theme, variables, all component styles
 ├── app.js       → State management, DOM manipulation, event handling
