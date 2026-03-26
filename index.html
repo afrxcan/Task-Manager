@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskr</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div class="app">
+
+      <!--Sidebar-->
+      <aside class="sidebar">
+
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <h1>Taskr</h1>
+        </div>
+
+        <nav class="categories">
+          <p class="nav-label">Categories</p>
+          <ul id="category-list">
+            <li class="cat-item active" data-category="all">
+              <span class="cat-icon">◈</span>
+              All
+              <span class="cat-count" id="count-all">0</span>
+            </li>
+            <li class="cat-item" data-category="work">
+              <span class="cat-icon">◆</span>
+              Work
+              <span class="cat-count" id="count-work">0</span>
+            </li>
+            <li class="cat-item" data-category="personal">
+              <span class="cat-icon">◆</span>
+              Personal
+              <span class="cat-count" id="count-personal">0</span>
+            </li>
+            <li class="cat-item" data-category="study">
+              <span class="cat-icon">◆</span>
+              Study
+              <span class="cat-count" id="count-study">0</span>
+            </li>
+            <li class="cat-item" data-category="other">
+              <span class="cat-icon">◆</span>
+              Other
+              <span class="cat-count" id="count-other">0</span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p id="done-summary">0 tasks done</p>
+        </div>
+
+      </aside>
+
+      <main class="main">
+
+        <!-- Header -->
+        <header class="main-header">
+          <h2 id="view-title">All Tasks</h2>
+          <p id="view-subtitle">What needs to get done?</p>
+        </header>
+
+        <!-- Task Bar -->
+        <div class="task-bar">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="New task..."
+            autocomplete="off"
+          />
+          <select id="category-select">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="study">Study</option>
+            <option value="other">Other</option>
+          </select>
+          <button id="add-btn">+ Add</button>
+        </div>
+
+        <!-- To Do Section -->
+        <section class="task-section">
+          <p class="section-label">TO DO</p>
+          <ul id="task-list" class="task-list"></ul>
+          <p class="empty-state" id="empty-active">Nothing here. Add a task above ↑</p>
+        </section>
+
+        <!-- Completed Section -->
+        <section class="task-section completed-section">
+          <p class="section-label">COMPLETED</p>
+          <ul id="done-list" class="task-list"></ul>
+          <p class="empty-state" id="empty-done">No completed tasks yet.</p>
+        </section>
+
+      </main>
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
